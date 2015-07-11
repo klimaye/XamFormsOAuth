@@ -9,11 +9,12 @@ namespace FormsOAuth
 		static NavigationPage _NavPage;
 		public static TwitterUser User;
 
+
 		public static class Constants
 		{
 			public const string consumerKey= "Twitter consumer key";
 			public const string consumerSecret= "Twitter consumer secret key";
-	
+			public const string facebookClientId = "Facebook app id";
 			public static Uri requestTokenUrl() {
 				return new Uri ("https://api.twitter.com/oauth/request_token");
 			}

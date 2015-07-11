@@ -7,20 +7,35 @@ namespace FormsOAuth
 	{
 		public AppStartPage ()
 		{
-			Content = new Label () {
-				Text = "App Start Page",
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.CenterAndExpand
+			Title = "Login";
+
+			var faceBookButton = new Button () {				
+				Text = "Facebook",
+			};
+			faceBookButton.Clicked += FaceBookButton_Clicked;
+			var twitterButton = new Button () {
+				Text = "Twitter"
+			};
+			twitterButton.Clicked += TwitterButton_Clicked;
+			Content = new StackLayout () {
+				Orientation = StackOrientation.Vertical,
+				Spacing = 10,
+				Children = {
+					faceBookButton,
+					twitterButton
+				}
 			};
 		}
 
-		protected override void OnAppearing ()
+		void TwitterButton_Clicked (object sender, EventArgs e)
 		{
-			base.OnAppearing ();
-			if (!App.IsLoggedIn) {
-				Navigation.PushModalAsync (new LoginPage (), true);
-			}
-		}			
+			Navigation.PushModalAsync (new LoginPage (), true);
+		}
+
+		void FaceBookButton_Clicked (object sender, EventArgs e)
+		{
+			Navigation.PushModalAsync (new FacebookLogin (), true);
+		}
 	}
 }
 
