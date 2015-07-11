@@ -1,4 +1,4 @@
-# Demo Social Media authentication via Xamarin.Auth
+# Demo Twitter/Facebook authentication via Xamarin.Auth
 ## Twitter
 The twitter oauth1 integration was tricky. There were a few samples on the web but they were missing a detail here and there that did not lead to a complete cross platform solution as of 7/11/2015.
 ### Gotchas
