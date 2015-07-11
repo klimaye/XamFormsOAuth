@@ -9,6 +9,6 @@ The twitter oauth1 integration was tricky. There were a few samples on the web b
 ## Facebook
 The facebook oauth2 integration was a bit less tricky. Most samples do not indicate the server side settings required.
 ### Gotchas
- - Turn on Web Auth Login in the Advanced App Settings
- - Provide a redirect url (can be the standard login_success.html facebook url
- - Make sure that you exactly match the redirect url in your request
+ - Turn on Web Auth Login in the Advanced App Settings in developers.facebook.com/{app}
+ - Provide a redirect url (can be the standard login_success.html facebook url) for Web Auth Setting
+ - Make sure that you exactly match the redirect url in your request (app side)
